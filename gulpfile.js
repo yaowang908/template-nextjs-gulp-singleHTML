@@ -1,3 +1,5 @@
+// https://www.labnol.org/code/bundle-react-app-single-file-200514
+
 const gulp = require('gulp')
 const inlinesource = require('gulp-inline-source')
 const replace = require('gulp-replace')
@@ -12,3 +14,4 @@ gulp.task('default', () => {
         }))
         .pipe(gulp.dest('./build'))
 });
+
