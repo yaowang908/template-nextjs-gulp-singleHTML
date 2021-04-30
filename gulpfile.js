@@ -7,7 +7,9 @@ const replace = require('gulp-replace')
 gulp.task('default', () => {
     return gulp.src('./out/index.html')
         .pipe(replace('.js"></script>', '.js" inline></script>'))
+        .pipe(replace('.js" async=""></script>', '.js" async="" inline></script>'))
         .pipe(replace('rel="stylesheet">', 'rel="stylesheet" inline>'))
+        .pipe(replace('<link rel="stylesheet"', '<link rel="stylesheet" inline'))
         .pipe(inlinesource({
             compress: false,
             ignore: ['png']
